@@ -1,0 +1,33 @@
+{
+  "name": "myanki",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:create": "wrangler d1 create myanki",
+    "db:migrate:local": "wrangler d1 migrations apply myanki --local",
+    "db:migrate:remote": "wrangler d1 migrations apply myanki --remote",
+    "r2:create": "wrangler r2 bucket create myanki-media"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.0.0",
+    "@cloudflare/workers-types": "^4.20250101.0",
+    "@types/sql.js": "^1.4.9",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "dompurify": "^3.2.0",
+    "jszip": "^3.10.1",
+    "sql.js": "^1.12.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "myanki",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Workers Assets: serve SPA from ./dist after vite build
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+
+  // D1: structured data
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "myanki",
+      "database_id": "REPLACE_WITH_OUTPUT_OF_npm_run_db:create",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // R2: media (sha256-keyed)
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "myanki-media"
+    }
+  ],
+
+  "observability": {
+    "enabled": true
+  }
+}
