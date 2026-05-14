@@ -11,9 +11,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:create": "wrangler d1 create myanki",
-    "db:migrate:local": "wrangler d1 migrations apply myanki --local",
-    "db:migrate:remote": "wrangler d1 migrations apply myanki --remote",
+    "db:create": "wrangler d1 create myanki-db",
+    "db:migrate:local": "wrangler d1 migrations apply myanki-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply myanki-db --remote",
     "r2:create": "wrangler r2 bucket create myanki-media"
   },
   "devDependencies": {

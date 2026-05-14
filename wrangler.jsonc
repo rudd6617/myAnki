@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "myanki",
+  "name": "my-anki",
   "main": "worker/index.ts",
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -16,8 +16,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "myanki",
-      "database_id": "REPLACE_WITH_OUTPUT_OF_npm_run_db:create",
+      "database_name": "myanki-db",
+      "database_id": "494eb86f-7174-4a05-90d1-09ae121ac0ec",
       "migrations_dir": "migrations"
     }
   ],
