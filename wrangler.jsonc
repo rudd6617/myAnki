@@ -2,12 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "my-anki",
   "main": "worker/index.ts",
+  "account_id": "d85f2d6c752e8056999b210d5cf48586",
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
 
-  // Workers Assets: serve SPA from ./dist after vite build
+  // Workers Assets: serve SPA from ./dist/client after `npm run build`.
+  // vite outputs client SPA to dist/client and worker bundle to dist/my_anki;
+  // pointing here at ./dist would expose the worker bundle (incl. .dev.vars) as static assets.
   "assets": {
-    "directory": "./dist",
+    "directory": "./dist/client",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   },
