@@ -1,0 +1,93 @@
+Python八股文
+解釋型語言 Python 和編譯型語言有什麼區別？
+Python3 中 is 和 == 有什麼區別？
+Python 中 any() 和 all() 方法有什麼作用？
+説明 Python3 中裝飾器的用法
+説明 Python3 中 yield 的用法
+説明 Python 中 enumerate() 的用法
+解釋 Python 中 //、％ 和 ** 運算符
+Python 有哪些特點和優點？
+什麼是 Python 中的三元表達式？
+請簡單介紹 Python 的 Flask 框架，有什麼作用？
+如何在 Python 中管理內存？
+Python 中 help() 函數和 dir() 函數有什麼作用？
+Python 程序退出時，是否釋放所有內存分配？
+什麼是 Python 的負索引？
+Python 是否區分大小寫？
+説明 Python 中標識符的命名規則
+Python 中如何刪除字符串中的前置空格？
+Python 中如何將字符串轉換為小寫？
+Python 的 pass 語句有什麼作用？
+什麼是 Python 的關係運算符？
+什麼是 Python 的賦值和算術運算符？
+什麼是 Python 的邏輯運算符？
+什麼是 Python 的成員運算符？
+什麼是 Python 的身份運算符？
+什麼是 Python 的位運算符？
+如何在 Python 中使用多進制數字？
+Python 中如何獲取字典的所有鍵？
+為什麼 Python 不建議使用下劃線開頭的標識符？
+Python 如何聲明多個變量並賦值？
+什麼是 Python 元組的解封裝？
+什麼是 Python？為什麼它會這麼流行？
+請列舉一些 Python 的應用場景
+Python 有哪些侷限性？
+請解釋 Python 代碼的執行過程？
+Python 有哪些內置數據結構？
+Python 中單引號和雙引號有什麼區別？
+Python 中 break、continue、pass 有什麼作用？
+Python 中如何實現 switch 語句？
+Python 的 range 函數如何運用？請舉例説明
+如何更改 Python 列表的數據類型？
+Python 中怎麼註釋代碼？
+Python 是否有 main 函數？
+Python 中如何使用索引反轉字符串？
+為什麼 Python 中沒有函數重載？
+你知道哪些 Python 魔術方法？
+請介紹 Python 中變量的作用域？
+如何在 Python 中實現字符串替換操作？
+你知道哪些 Python 的編碼規範？
+init 方法在 Python 中有什麼作用？
+什麼是鴨子類型（duck typing）？
+你使用過哪些 Python 標準庫模塊？
+説明 Python 中的 zip 函數
+如何使用 Python 的 random 模塊生成隨機數、實現隨機亂序和隨機抽樣？
+Python 中 read、readline、readlines 有哪些區別？
+什麼是 Python 面向對象中的繼承特點？
+Python 中深拷貝和淺拷貝有什麼區別？
+Python 中的列表和元組有什麼區別？
+什麼是 Python 的字典，有哪些用法？
+什麼是 Python 的閉包？
+Python 中 append、insert 和 extend 有什麼區別？
+Python 中 remove、del 和 pop 有什麼區別？
+Python 中的 != 和 is not 運算符有什麼區別？
+Python 的 iterables 和 iterators 有什麼區別？
+Python 中的 Map 函數有什麼作用？怎麼使用？
+Python 中的 Filter 函數有什麼作用？怎麼使用？
+Python 中 reduce 函數有什麼作用？怎麼使用？
+什麼是 Python 的 pickling 和 unpickling？
+什麼是 Python 的生成器？
+什麼是 Python 的 Lambda 函數，有哪些應用場景？
+Python 的迭代器和生成器有什麼區別？
+Python 正則表達式中 match 和 search 有什麼區別？
+Python 的 __**init__** 和 __**new__** 方法有什麼區別？
+Python 函數參數 *arg 和 **kwargs 有什麼區別？怎麼使用？
+Python 2 和 Python 3 有什麼區別？
+什麼是 “猴子補丁”（monkey patching）？
+Python 在什麼情況下會出現 KeyError、TypeError、ValueError？
+什麼是 Python 中的模塊和包？
+Python 的類和對象有什麼區別？
+什麼是 Python 類中的 self？
+什麼是 Python 的 OOPS（面向對象編程）？
+什麼是 Python 面向對象的抽象特性？
+什麼是 Python 面向對象的封裝特性？
+什麼是 Python 面向對象的多態特性？
+Python 是否支持多重繼承？
+為什麼 Python 執行速度慢，如何改進？
+如何分析 Python 代碼的執行性能？
+Python 中如何讀取大文件，例如內存只有 4G，如何讀取一個大小為 8G 的文件
+Python 的 re 模塊中 split()、sub()、subn() 方法有什麼作用？
+Python 的 namedtuple 有什麼作用？怎麼使用？
+Python 中如何實現多線程？
+請介紹 Python 中多線程和多進程的應用場景，以及優缺點？
+請解釋 Python 線程池的工作原理？
