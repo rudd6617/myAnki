@@ -10,6 +10,16 @@ import type {
 
 const TOKEN_KEY = "owner_token";
 
+// One-shot: if URL has `#t=<token>`, store it and strip the fragment so the
+// next reload doesn't re-leak via history / screenshots. Call at app boot.
+export function bootstrapTokenFromUrl(): void {
+  if (!location.hash.startsWith("#t=")) return;
+  const t = decodeURIComponent(location.hash.slice(3));
+  if (!t) return;
+  localStorage.setItem(TOKEN_KEY, t);
+  history.replaceState(null, "", location.pathname + location.search);
+}
+
 export function getToken(): string {
   let t = localStorage.getItem(TOKEN_KEY) ?? "";
   if (!t) {

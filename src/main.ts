@@ -1,8 +1,11 @@
 import { registerRoute, start } from "./router";
+import { bootstrapTokenFromUrl } from "./lib/api";
 import { renderHome } from "./views/home";
 import { renderImport } from "./views/import";
 import { renderReview } from "./views/review";
 import "./styles/main.css";
+
+bootstrapTokenFromUrl();
 
 registerRoute(/^\/$/, (container) => renderHome(container));
 registerRoute(/^\/import$/, (container) => renderImport(container));
