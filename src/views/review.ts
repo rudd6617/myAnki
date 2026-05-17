@@ -103,23 +103,14 @@ export function renderReview(container: HTMLElement, params: string[]): void {
     if (!card) return;
 
     try {
-      const result = await api.postReview(card.id, quality);
-      const updatedCard: Card = {
-        ...card,
-        state: result.state,
-        ease: result.ease,
-        interval_d: result.interval_d,
-        due: result.due,
-        reps: card.reps + 1,
-        lapses: quality === Quality.Again ? card.lapses + 1 : card.lapses,
-      };
-
-      const newQueue = [...s.queue];
-      newQueue[s.index] = updatedCard;
+      await api.postReview(card.id, quality);
 
       if (quality === Quality.Again) {
-        newQueue.splice(s.index, 1);
-        newQueue.push(updatedCard);
+        // Recycle to today's queue tail. SM-2 state is authoritative on server;
+        // we keep the same card object since front_html/back_html don't change.
+        const newQueue = [...s.queue];
+        const [recycled] = newQueue.splice(s.index, 1);
+        newQueue.push(recycled!);
         if (s.index >= newQueue.length) {
           setState({ kind: "done" });
           return;
@@ -129,13 +120,13 @@ export function renderReview(container: HTMLElement, params: string[]): void {
       }
 
       const nextIndex = s.index + 1;
-      if (nextIndex >= newQueue.length) {
+      if (nextIndex >= s.queue.length) {
         setState({ kind: "done" });
         return;
       }
       setState({
         kind: "session",
-        session: { ...s, queue: newQueue, index: nextIndex, revealed: false },
+        session: { ...s, index: nextIndex, revealed: false },
       });
     } catch (err) {
       setState({ kind: "error", message: messageOf(err) });

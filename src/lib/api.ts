@@ -1,7 +1,6 @@
 import type {
   Card,
   DeckListEntry,
-  GradeResponseShape,
   ImportRequest,
   ImportResponse,
   MediaCheckRequest,
@@ -84,12 +83,11 @@ export const api = {
     return r.json();
   },
 
-  async postReview(cardId: number, quality: Quality): Promise<GradeResponseShape> {
-    const r = await call(`/api/cards/${cardId}/review`, {
+  async postReview(cardId: number, quality: Quality): Promise<void> {
+    await call(`/api/cards/${cardId}/review`, {
       method: "POST",
       body: JSON.stringify({ quality }),
     });
-    return r.json();
   },
 
   async checkMedia(hashes: string[]): Promise<MediaCheckResponse> {

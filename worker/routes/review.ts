@@ -98,10 +98,5 @@ export async function postReview(
     ),
   ]);
 
-  return json({
-    state: next.state,
-    ease: next.ease,
-    interval_d: next.interval_d,
-    due: next.due,
-  });
+  return new Response(null, { status: 204 });
 }

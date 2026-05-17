@@ -110,10 +110,3 @@ export interface MediaCheckRequest {
 export interface MediaCheckResponse {
   missing: string[];
 }
-
-export interface GradeResponseShape {
-  state: CardState;
-  ease: number;
-  interval_d: number;
-  due: number;
-}
